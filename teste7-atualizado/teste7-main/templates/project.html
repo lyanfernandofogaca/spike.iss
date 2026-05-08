@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ project.nome }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-dot"></div>
+      <form method="get" action="/" class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" name="q" placeholder="Pesquisar" autocomplete="off" />
+      </form>
+    </header>
+
+    <main class="main-content detail-layout">
+      <!-- Imagem grande à esquerda -->
+      <div class="detail-image"></div>
+
+      <!-- Conteúdo à direita -->
+      <div class="detail-content">
+        <h1>{{ project.nome }}</h1>
+
+        <span class="badge {% if project.status == 'intacto' %}badge-intacto{% else %}badge-avariado{% endif %}" style="margin-bottom: 12px; display:inline-block;">
+          {{ project.status }}
+        </span>
+
+        <img src="{{ project.bandeira }}" alt="Bandeira" class="flag" />
+
+        <h3>Descrição</h3>
+        <p class="descricao-texto">{{ project.descricao }}</p>
+
+        <h3>Passo a passo para o reparo</h3>
+        <ul id="checklist">
+          {% for passo in project.passos %}
+          <li>
+            <label>
+              <input type="checkbox" />
+              <span>{{ passo }}</span>
+            </label>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <button class="btn-add" onclick="adicionarItem()">+ Adicionar novo item...</button>
+
+        <div class="detail-actions">
+          <input type="text" class="input-busca" placeholder="Buscar aqui..." />
+          <button class="btn-intacto">● intacto</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      background por <a href="https://br.freepik.com/vetores-gratis/fundo-gradiente-de-galaxia_14658088.htm" target="_blank">Freepik</a>
+    </footer>
+
+    <script>
+      function adicionarItem() {
+        const lista = document.getElementById("checklist");
+        const li = document.createElement("li");
+        li.innerHTML = '<label><input type="checkbox" /><span contenteditable="true">Novo passo...</span></label>';
+        lista.appendChild(li);
+        li.querySelector("span").focus();
+      }
+    </script>
+  </body>
+</html>

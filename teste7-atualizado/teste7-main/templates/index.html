@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos Científicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-dot"></div>
+      <form method="get" action="/" class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" name="q" placeholder="Pesquisar" value="{{ request.args.get('q','') }}" autocomplete="off" />
+      </form>
+    </header>
+
+    <main class="main-content">
+      <div class="grid">
+        {% for p in projects %}
+        <a href="/project/{{ p.id }}" class="card">
+          <div class="card-image"></div>
+          <div class="card-info">
+            <h2>{{ p.nome }}</h2>
+            <span class="badge {% if p.status == 'intacto' %}badge-intacto{% else %}badge-avariado{% endif %}">
+              {{ p.status }}
+            </span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="pagination">
+        <button class="page-btn">&#8249;</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">&#8250;</button>
+      </div>
+    </main>
+
+    <footer>
+      background por <a href="https://br.freepik.com/vetores-gratis/fundo-gradiente-de-galaxia_14658088.htm" target="_blank">Freepik</a>
+    </footer>
+  </body>
+</html>

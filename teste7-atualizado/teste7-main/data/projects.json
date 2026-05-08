@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nome": "Densidade óssea e muscular em microgravidade",
+    "status": "intacto",
+    "descricao": "Estudo dos efeitos da microgravidade na densidade óssea e muscular dos astronautas.",
+    "bandeira": "https://flagcdn.com/w40/br.png",
+    "passos": [
+      "Montar experimentos com sensores",
+      "Observar comportamento em órbita",
+      "Comparar com simulações computacionais"
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Materiais resistentes à radiação espacial",
+    "status": "avariado",
+    "descricao": "Análise de materiais expostos à radiação cósmica para avaliar resistência.",
+    "bandeira": "https://flagcdn.com/w40/us.png",
+    "passos": [
+      "Avaliar dano ao experimento",
+      "Identificar peças a substituir",
+      "Remover peças danificadas com cuidado"
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Comportamento de fluidos em microgravidade",
+    "status": "avariado",
+    "descricao": "Observação do comportamento de fluidos em ambiente sem gravidade.",
+    "bandeira": "https://flagcdn.com/w40/fr.png",
+    "passos": [
+      "Montar experimentos com fluidos",
+      "Observar comportamento em órbita",
+      "Comparar com simulações computacionais"
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "Microrganismos em ambiente extremo",
+    "status": "intacto",
+    "descricao": "Estudo da sobrevivência de microrganismos em condições espaciais.",
+    "bandeira": "https://flagcdn.com/w40/de.png",
+    "passos": [
+      "Coletar amostras",
+      "Expor ao ambiente espacial",
+      "Analisar resultados"
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Crescimento de plantas em microgravidade",
+    "status": "intacto",
+    "descricao": "Pesquisa sobre cultivo de plantas em ambiente sem gravidade.",
+    "bandeira": "https://flagcdn.com/w40/jp.png",
+    "passos": [
+      "Montar estufa experimental",
+      "Monitorar crescimento em órbita",
+      "Comparar com cultivo terrestre"
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "Regeneração de tecidos em microgravidade",
+    "status": "avariado",
+    "descricao": "Investigação sobre processos de regeneração celular em ambiente espacial.",
+    "bandeira": "https://flagcdn.com/w40/it.png",
+    "passos": [
+      "Avaliar dano ao experimento",
+      "Substituir componentes defeituosos",
+      "Reiniciar coleta de dados"
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "Comunicação por rádio no espaço",
+    "status": "intacto",
+    "descricao": "Testes de transmissão e recepção de sinais de rádio em órbita.",
+    "bandeira": "https://flagcdn.com/w40/ru.png",
+    "passos": [
+      "Configurar antenas",
+      "Realizar testes de transmissão",
+      "Comparar qualidade do sinal"
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "Cristalização de proteínas em microgravidade",
+    "status": "avariado",
+    "descricao": "Estudo da cristalização de proteínas em ambiente sem gravidade.",
+    "bandeira": "https://flagcdn.com/w40/cn.png",
+    "passos": [
+      "Montar experimentos de cristalização",
+      "Observar formação de cristais",
+      "Comparar com resultados terrestres"
+    ]
+  }
+]
